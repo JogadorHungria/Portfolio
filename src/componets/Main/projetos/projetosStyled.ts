@@ -49,13 +49,18 @@ padding-top: 50px;
 
 .prev-button {
   left: 0.5rem;
-  color: white;
+  color: grey;
 }
 
 .next-button {
   right: 0.5rem;
+  color: grey;
+}
+
+.next-button:hover, .prev-button:hover{
   color: white;
 }
+
 
 
 `;

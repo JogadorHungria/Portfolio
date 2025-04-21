@@ -4,16 +4,20 @@ export const CardStyles = styled.li`
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(117, 11, 189, 1);
-  min-width: 220px;
-  max-width: 220px;
+  width: 220px;
+  animation: fadeIn 0.5s ease-in forwards; /* Aparecer ao carregar */
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: 0.3s;
   z-index: 2;
-  :hover {
-    transform: scale(1.02);
+  opacity: 80%
+  ;
+
+  :hover{
+    opacity: 100%
+  
   }
 
   img {
@@ -48,5 +52,17 @@ export const CardStyles = styled.li`
         width: 90%;
       }
     }
+  
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px); /* Adiciona um leve movimento */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
+}
 `;
