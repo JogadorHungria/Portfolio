@@ -5,6 +5,7 @@ export const ProjetosStyled = styled.section`
 padding-top: 50px;
 
 .carousel {
+  padding-top: 50px;
   position: relative;
   display: flex;
   flex-direction: column;
