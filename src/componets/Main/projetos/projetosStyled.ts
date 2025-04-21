@@ -1,46 +1,61 @@
 import styled from "styled-components";
 
 export const ProjetosStyled = styled.section`
+
+padding-top: 50px;
+
+.carousel {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  min-height: max-content;
-  max-width: 1200px;
-  gap: 30px;
-  padding-top: 120px;
+  width: 900px;
+  max-width: 90vw;
+}
 
-  box-sizing: border-box;
 
-  > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
-  }
+.carousel-slides {
 
-  ul {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: space-around;
+ 
+  
+}
 
-    gap: 20px;
-  }
-  @media (min-width: 1051px) {
-    ul {
-      justify-content: center;
-    }
-  }
+.carousel-item {
+  padding: 6px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
 
-  @media (max-width: 1050px) {
-    ul {
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: baseline;
-      align-items: baseline;
-      overflow-y: hidden;
-      width: 90vw;
-      padding-bottom: 20px;
-    }
-    padding-bottom: 50px;
-  }
+.carousel-item.active {
+  opacity: 1;
+}
+
+.prev-button,
+.next-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.prev-button {
+  left: 0.5rem;
+  color: white;
+}
+
+.next-button {
+  right: 0.5rem;
+  color: white;
+}
+
+
 `;

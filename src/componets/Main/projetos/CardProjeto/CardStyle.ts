@@ -13,7 +13,7 @@ export const CardStyles = styled.li`
   transition: 0.3s;
   z-index: 2;
   :hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 
   img {
