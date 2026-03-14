@@ -8,12 +8,11 @@ export const Projetos = () => {
   const [startIndex, setStartIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
 
-  // Função para ajustar o número de itens por página com base na largura da tela
   const adjustItemsPerPage = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 900) {
       setItemsPerPage(3);
-    } else if (screenWidth < 900 && screenWidth > 700) {
+    } else if (screenWidth >= 700) {
       setItemsPerPage(2);
     } else {
       setItemsPerPage(1);
@@ -21,17 +20,13 @@ export const Projetos = () => {
   };
 
   useEffect(() => {
-    // Ajusta o número de itens ao carregar o componente
     adjustItemsPerPage();
-
-    // Adiciona o evento de resize para monitorar mudanças no tamanho da tela
     window.addEventListener("resize", adjustItemsPerPage);
-
-    // Limpa o evento ao desmontar o componente
-    return () => {
-      window.removeEventListener("resize", adjustItemsPerPage);
-    };
+    return () => window.removeEventListener("resize", adjustItemsPerPage);
   }, []);
+
+  const totalPages = Math.ceil(projetos.length / itemsPerPage);
+  const currentPage = Math.floor(startIndex / itemsPerPage) + 1;
 
   const nextSlide = () => {
     setStartIndex((prevIndex) => {
@@ -44,7 +39,6 @@ export const Projetos = () => {
     setStartIndex((prevIndex) => {
       const prevIndexValue = prevIndex - itemsPerPage;
       if (prevIndexValue < 0) {
-        // Caso volte além do início, ajusta para o último grupo visível
         return projetos.length % itemsPerPage === 0
           ? projetos.length - itemsPerPage
           : projetos.length - (projetos.length % itemsPerPage);
@@ -53,18 +47,18 @@ export const Projetos = () => {
     });
   };
 
-  // Filtra os projetos para exibir somente os do índice atual
-  const visibleProjects = projetos.slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
+  const visibleProjects = projetos.slice(startIndex, startIndex + itemsPerPage);
 
   return (
     <ProjetosStyled id="projects">
-      <div className="effectScrollMonitoring">
+      <div style={{ marginTop: "70px" }} className="effectScrollMonitoring">
         <Title text={"Projetos"} />
-        <button onClick={prevSlide} className="prev-button">{"<"}</button>
-        <div className="carousel">
+
+        <div style={{ marginTop: "50px" }} className="carousel">
+          <button onClick={prevSlide} className="prev-button">
+            {"<"}
+          </button>
+
           <ul className="carousel-slides">
             {visibleProjects.map((projeto) => (
               <li key={projeto.id} className="carousel-item active">
@@ -72,8 +66,20 @@ export const Projetos = () => {
               </li>
             ))}
           </ul>
+
+          <button onClick={nextSlide} className="next-button">
+            {">"}
+          </button>
         </div>
-        <button onClick={nextSlide} className="next-button">{">"}</button>
+
+        <div className="carousel-indicators">
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <span
+              key={index}
+              className={`indicator ${currentPage === index + 1 ? "active" : ""}`}
+            />
+          ))}
+        </div>
       </div>
     </ProjetosStyled>
   );

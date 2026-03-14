@@ -31,11 +31,12 @@ body{
   font-family: 'Poppins', sans-serif;
   max-width: 100vw;
   min-height: 100vh;
-  background-image: url("/imagens/fundo-descktop.jpg");
+  /* background-image: url("/imagens/fundo-descktop.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
+  background-color: "#020202";
   color:  white;
 }
 

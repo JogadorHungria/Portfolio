@@ -3,7 +3,7 @@ import { Title } from "../../Titles";
 export const SobreMin = () => {
   return (
     <SobreMinStyle id="aboutMe">
-      <div className="effectScrollMonitoring">
+      <div style={{ marginTop: "100px" }} className="effectScrollMonitoring">
         <Title text={"Sobre mim"} />
         <div>
           <p>

@@ -1,28 +1,19 @@
-import { Header } from "./componets/Header";
-import { Main } from "./componets/Main";
-import React, { useState } from "react";
-import { NavMobile } from "./componets/Header/NavMobile/HeaderMobile";
-import { BackDrop } from "./componets/BackDrop";
-import { Footer } from "./componets/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { Portfolio } from "./pages/Portfolio";
+import { FidezeLanding } from "./pages/FidezeLanding";
 
 function App() {
-  const [menuMobile, setMenuMobile] = useState(false);
-
-  const closeMenuMobile = () => {
-    setMenuMobile(false);
-  };
-
   return (
-    <div className="App">
-      <BackDrop />
-      <Header
-        setMenuMobile={setMenuMobile}
-        menuMobile={menuMobile}
-      />
-      {menuMobile && <NavMobile openCloseMenu={closeMenuMobile} />}
-      <Main />
-      <Footer />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        {/* PORTFOLIO */}
+        <Route path="/" element={<Portfolio />} />
+
+        {/* LANDING FIDEZE */}
+        <Route path="/fideze" element={<FidezeLanding />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

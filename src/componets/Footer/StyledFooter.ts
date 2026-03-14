@@ -22,10 +22,11 @@ export const StyledFooter = styled.footer`
     background-color: blueviolet;
     border: solid 1px white;
     border-radius: var(--radius-1);
-    padding: 5px;
+    padding: 5px 25px;
     z-index: 9;
     opacity: 0.8;
     transition: 0.3s;
+    border-radius: 10px;
   }
   a:hover {
     opacity: 1;

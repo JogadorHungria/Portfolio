@@ -3,27 +3,29 @@ import styled from "styled-components";
 export const SobreMinStyle = styled.section`
   display: flex;
   flex-direction: column;
-  width: 1000px;
-  max-width: 95%;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  padding-top: 120px;
+  width: 100%;
+  max-width: 900px;
+  padding: clamp(40px, 10vh, 120px) 20px;
+  gap: clamp(20px, 3vw, 30px);
 
-  div {
+  div.effectScrollMonitoring {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: clamp(20px, 3vw, 30px);
+    width: 100%;
   }
 
-  div > div {
+  div.effectScrollMonitoring > div {
     display: flex;
     flex-direction: column;
-    padding: 30px;
-    gap: 20px;
+    padding: clamp(20px, 2vw, 30px);
+    gap: clamp(15px, 2vw, 20px);
     background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 5px;
+    border-radius: 8px;
     border: 1px solid var(--color-1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
   }
 
   span {
@@ -31,38 +33,28 @@ export const SobreMinStyle = styled.section`
   }
 
   p {
-    font-size: 20px;
+    font-size: clamp(16px, 1.2vw, 20px);
     text-align: justify;
-    line-height: 150%;
+    line-height: 1.7;
     color: var(--color-grey-4);
-    text-indent: 10px;
+    text-indent: 12px;
   }
 
   @media (max-width: 800px) {
-    div {
-      padding: 30px;
-    }
+    padding-top: 60px;
 
-    margin-top: 50px;
+    div.effectScrollMonitoring > div {
+      padding: 20px;
+    }
   }
 
   @media (max-width: 400px) {
-    div {
+    div.effectScrollMonitoring > div {
       padding: 15px;
     }
 
-    h3 {
-      font-size: var(--font-title-2);
-    }
-
     p {
-      font-size: 16px;
-    }
-  }
-
-  @media (max-width: 300px) {
-    h3 {
-      font-size: var(--font-title-3);
+      font-size: 14px;
     }
   }
 `;

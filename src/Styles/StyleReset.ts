@@ -10,12 +10,13 @@ nav, section{
 
     margin: 0;
     padding: 0;
-    border: 0;
     font-size: 100%;
     vertical-align: baseline;
     text-decoration: none;
+    line-height: 1.5;
     
 }
+
 
 
 ol, ul {
