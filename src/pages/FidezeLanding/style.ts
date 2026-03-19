@@ -122,7 +122,7 @@ export const Benefits = styled.div`
   max-width: 80vw;
   min-width: 260px;
   padding: 30px;
-
+  background: rgba(0, 0, 0, 0.65);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -137,7 +137,6 @@ export const Benefits = styled.div`
     font-size: 19px;
     font-weight: 700;
   }
-
   ul {
     list-style: none;
     padding: 0;
@@ -145,14 +144,14 @@ export const Benefits = styled.div`
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
-
-    font-size: 16px;
+    gap: 12px;
   }
 
   li {
     display: flex;
-    align-items: center;
-    gap: 8px;
+    align-items: flex-start; /* AQUI resolve */
+    gap: 10px;
+    text-align: left;
+    line-height: 1.4;
   }
 `;
