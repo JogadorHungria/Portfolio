@@ -42,7 +42,7 @@ export const ProjetosStyled = styled.section`
   .next-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-60%);
     background-color: rgba(0, 0, 0, 0.2);
     border: none;
     font-size: 2rem;
@@ -115,11 +115,11 @@ export const ProjetosStyled = styled.section`
     }
 
     .prev-button {
-      left: 5px; /* perto da borda da tela */
+      left: -50px; /* perto da borda da tela */
     }
 
     .next-button {
-      right: 5px;
+      right: -20px;
     }
   }
 `;

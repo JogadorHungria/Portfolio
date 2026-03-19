@@ -1,7 +1,7 @@
 import { InicioStyled } from "./InicioStyled";
 
 export const Inicio = () => {
-  const perfilImag = "/imagens/image_perfil.png";
+  const perfilImag = "/imagens/image_perfil.jpg";
 
   return (
     <InicioStyled id="start">
