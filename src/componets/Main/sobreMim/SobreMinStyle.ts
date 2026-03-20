@@ -5,7 +5,7 @@ export const SobreMinStyle = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 80%;
   max-width: 900px;
   padding: clamp(40px, 10vh, 120px) 20px;
   gap: clamp(20px, 3vw, 30px);

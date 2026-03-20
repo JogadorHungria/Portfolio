@@ -15,6 +15,7 @@ export function Portfolio() {
     <div
       style={{
         minHeight: "100vh",
+        maxWidth: "100vw",
         backgroundImage: 'url("/imagens/fundo-descktop.jpg")',
         backgroundSize: "cover",
         backgroundPosition: "center",
@@ -22,10 +23,6 @@ export function Portfolio() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <Header setMenuMobile={setMenuMobile} menuMobile={menuMobile} />
-
-      {menuMobile && <NavMobile openCloseMenu={closeMenuMobile} />}
-
       <Main />
 
       <Footer />

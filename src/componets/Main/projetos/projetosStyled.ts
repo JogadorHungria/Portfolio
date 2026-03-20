@@ -11,7 +11,6 @@ export const ProjetosStyled = styled.section`
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    padding: 0 1rem;
   }
 
   .carousel-slides {
@@ -101,11 +100,11 @@ export const ProjetosStyled = styled.section`
     }
 
     .prev-button {
-      left: -30px;
+      left: -50px;
     }
 
     .next-button {
-      right: -30px;
+      right: -50px;
     }
   }
 
@@ -119,7 +118,22 @@ export const ProjetosStyled = styled.section`
     }
 
     .next-button {
-      right: -20px;
+      right: -50px;
+    }
+  }
+
+  @media (max-width: 400px) {
+    .carousel-item {
+      max-width: fit-content;
+      flex: 0 0 100%; /* 1 card mobile */
+    }
+
+    .prev-button {
+      left: -30px; /* perto da borda da tela */
+    }
+
+    .next-button {
+      right: -30px;
     }
   }
 `;
