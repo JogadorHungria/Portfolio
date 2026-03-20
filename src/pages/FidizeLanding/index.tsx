@@ -3,7 +3,6 @@ import emailjs from "@emailjs/browser";
 
 import { BackDrop } from "../../componets/BackDrop";
 import { Container, InfoBox, FormBox, Form, Benefits } from "./style";
-import { Footer } from "../../componets/Footer";
 
 export function FidezeLanding() {
   const formRef = useRef();
@@ -47,7 +46,7 @@ export function FidezeLanding() {
           <h1 style={{ fontSize: "29px" }}>🎉 Parabéns!</h1>
 
           <p style={{ fontSize: "20px", marginTop: "10px" }}>
-            Você finalizou seu pré-cadastro no FíDeZé.
+            Você finalizou seu pré-cadastro no Fídizé.
           </p>
 
           <p style={{ marginTop: "20px", color: "#dbd8d8" }}>
@@ -69,7 +68,7 @@ export function FidezeLanding() {
 
       <InfoBox>
         <h1>
-          Fí<span>De</span>Zé, O app que conecta você a motoristas que conhecem
+          Fídi<span>zé</span>, O app que conecta você a motoristas que conhecem
           sua cidade
         </h1>
 
@@ -78,12 +77,12 @@ export function FidezeLanding() {
           para Simões Filho.
         </p>
 
-        <p>Cadastre-se e seja um dos primeiros a testar o FíDeZé.</p>
+        <p>Cadastre-se e seja um dos primeiros a testar o Fídizé.</p>
 
         <p>— Garanta seu acesso antecipado —</p>
 
         <Benefits>
-          <h3>Por que usar o FíDeZé?</h3>
+          <h3>Por que usar o Fídizé?</h3>
 
           <ul>
             <li>🔒 Mais segurança em cada corrida</li>
@@ -102,7 +101,7 @@ export function FidezeLanding() {
 
       <FormBox>
         <div>
-          <h2>Cadastre-se para ser avisado quando o FíDeZé for lançado</h2>
+          <h2>Cadastre-se para ser avisado quando o Fídizé for lançado</h2>
         </div>
 
         <Form ref={formRef} onSubmit={sendEmail}>
@@ -144,7 +143,7 @@ export function FidezeLanding() {
       >
         <p>© {new Date().getFullYear()} FíDeZé</p>
         <p>
-          O FíDeZé conecta passageiros a motoristas parceiros independentes.
+          O Fídizé conecta passageiros a motoristas parceiros independentes.
         </p>
         <p>Um aplicativo pensado para Simões Filho.</p>
         <p>Contato: (71) 9 9130-1551</p>
