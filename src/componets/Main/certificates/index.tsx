@@ -1,22 +1,21 @@
-import { certificateImages } from "../../../mock/certificates";
+import { certificates } from "../../../mock/certificates";
 import { Title } from "../../Titles";
 import { StyledCertificate } from "./style";
 
 export const Certificates = () => {
   return (
-    <div
-      style={{ marginTop: "100px" }}
+    <section
       id="certificates"
       className="effectScrollMonitoring"
     >
       <StyledCertificate>
         <Title text={"Certificados"} />
         <div>
-          {certificateImages.map((image) => (
-            <img src={image} alt="imagem" />
+          {certificates.map((certificate) => (
+            <img key={certificate.image} src={certificate.image} alt={certificate.alt} loading="lazy" />
           ))}
         </div>
       </StyledCertificate>
-    </div>
+    </section>
   );
 };

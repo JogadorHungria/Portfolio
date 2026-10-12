@@ -1,6 +1,6 @@
 export const NavDesktop = () => {
   return (
-    <nav className="menu">
+    <nav className="menu" aria-label="Navegação principal">
       <a className="menu" href="#start">
         Início
       </a>

@@ -1,33 +1,32 @@
 import styled from "styled-components";
 
 export const StyledCertificate = styled.div`
-  margin-top: 100px;
-  padding: 50px;
-  max-width: 1000px;
+  width: min(1120px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 80px 0 0;
 
-  div {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center;
+  > div {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: center;
-    flex-wrap: wrap;
-    gap: 40px;
-    min-height: max-content;
+    gap: 20px;
+    margin-top: 34px;
   }
 
   img {
-    width: 450px;
-    height: 300px;
-    max-width: 90%;
-    background-color: black;
-    transition: 0.3s;
-
+    width: 100%;
+    max-height: 360px;
+    aspect-ratio: 3 / 2;
+    object-fit: contain;
+    border: 1px solid rgba(196,181,253,0.13);
     border-radius: 12px;
+    background: #131118;
+    transition: transform 180ms ease, border-color 180ms ease;
   }
+  img:hover { transform: translateY(-3px); border-color: rgba(196,181,253,0.4); }
 
-  img:hover {
-    align-self: center;
-    transition: 0.5s;
-    transform: scale(1.1);
+  @media (max-width: 720px) {
+    width: calc(100% - 36px);
+    > div { grid-template-columns: 1fr; gap: 14px; }
   }
 `;

@@ -1,68 +1,61 @@
 import styled from "styled-components";
 
-export const CardStyles = styled.li`
-  padding: 10px;
-  border-radius: 5px;
-  background-color: rgba(117, 11, 189, 1);
-  width: 220px;
-  animation: fadeIn 0.5s ease-in forwards; /* Aparecer ao carregar */
-  height: 300px;
+export const CardStyles = styled.article`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  transition: 0.3s;
-  z-index: 2;
-  opacity: 80%
-  ;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid rgba(196, 181, 253, 0.16);
+  border-radius: 14px;
+  background: linear-gradient(155deg, rgba(29, 23, 41, 0.98), rgba(15, 13, 20, 0.98));
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 
-  :hover{
-    opacity: 100%
-  
+  &:hover {
+    transform: translateY(-5px);
+    border-color: rgba(196, 181, 253, 0.48);
+    box-shadow: 0 24px 54px rgba(0, 0, 0, 0.3);
   }
 
-  img {
+  .project-image {
     width: 100%;
-    min-height: 50%;
-    border-radius: 4px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    background: #17121f;
   }
 
-  h2 {
-    font-size: 22px;
-    color: white;
-    font-weight: 600;
-    align-self: baseline;
-  }
-
-  > div {
-    margin-top: 5px;
+  .project-body {
     display: flex;
+    flex: 1;
     flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-
-    .container_buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-      width: 100%;
-
-      a {
-        width: 90%;
-      }
-    }
-  
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px); /* Adiciona um leve movimento */
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    align-items: flex-start;
+    gap: 15px;
+    padding: 22px;
   }
-}
+
+  h3 { color: #fff; font-size: 1.2rem; line-height: 1.3; }
+  p { color: #c6c1d0; font-size: 0.94rem; line-height: 1.7; }
+
+  .project-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .project-tags span {
+    padding: 4px 9px;
+    border: 1px solid rgba(196, 181, 253, 0.18);
+    border-radius: 999px;
+    color: #d8ccff;
+    font-size: 0.74rem;
+  }
+
+  .project-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: auto; padding-top: 4px; }
+  .project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 11px;
+    border-radius: 7px;
+    background: rgba(167, 139, 250, 0.11);
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 650;
+  }
+  .project-links a:hover { background: rgba(167, 139, 250, 0.25); }
 `;

@@ -1,42 +1,32 @@
-import { animate } from "framer-motion";
 import styled from "styled-components";
 
 export const MenuMobileStyle = styled.div`
   display: none;
-  height: 100vh;
-  width: 100%;
-  color: white;
   position: fixed;
-  top: 100px;
-
-  z-index: 8;
+  inset: 76px 0 0;
+  z-index: 19;
+  overflow-y: auto;
+  background: rgba(7, 6, 10, 0.68);
+  backdrop-filter: blur(3px);
 
   @media (max-width: 850px) {
-    display: flex;
-
+    display: block;
     nav {
-      border-top: 1px solid white;
-      position: fixed;
       display: flex;
       flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: 20px 0;
-      height: max-content;
-      background-color: blueviolet;
-      gap: 20px;
-      animation: AnimateTopToBottomMenu 0.2s;
-      z-index: 8;
-
-      a {
-        font-size: 20px;
-        padding-bottom: 10px;
-        border-bottom: 2px solid blueviolet;
-        color: var(--color-grey-5);
-      }
-      a:hover {
-        border-bottom: 2px solid white;
-      }
+      align-items: stretch;
+      gap: 0;
+      padding: 12px 24px 18px;
+      border-bottom: 1px solid rgba(196,181,253,0.2);
+      background: #111018;
     }
+    nav a {
+      padding: 14px 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      color: #eeeaf5;
+      font-size: 1rem;
+    }
+    nav a:last-child { border-bottom: 0; }
+    nav a:hover { color: #c4b5fd; }
   }
 `;

@@ -2,139 +2,73 @@ import { IProjetos } from "../interface";
 
 export const projetos: IProjetos[] = [
   {
+    id: 4,
+    img: "/imagens/projetos/fideze-pre-cadastro.png",
+    name: "Fídizé",
+    descricao:
+      "Aplicativo de mobilidade urbana pensado para conectar passageiros e motoristas em Simões Filho. O projeto reúne apps mobile para os dois públicos e uma API com cadastro, autenticação, corridas e atualizações em tempo real. Está em desenvolvimento; o fluxo do MVP ainda depende da configuração dos serviços e de testes nos aparelhos.",
+    stack: ["React Native", "Expo", "NestJS", "Prisma", "PostgreSQL", "Socket.IO", "Zustand"],
+    linkName: "Ver pré-cadastro",
+    link: "/fidize",
+    repositorio: "",
+  },
+  {
     id: 1,
     img: "/imagens/projetos/HungriaBurguer-2.0.jpg",
-    name: "Hungria Burguer 2.0",
+    name: "Hungria Burger 2.0",
     descricao:
-      "Esta e a versão 2.0 onde recriei meu código utilizando Typescript, foi desenvolvido a partir de um figma onde eu tinha que desenvolver um site para uma empresa de fast-food, onde o cliente se cadastra e tem o poder de adicionar e remover do carrinho de compras.",
-
-    stack: [
-      "Typescript",
-      "React",
-      "React-toastify",
-      "react-router-dom",
-      "Styled-Componet",
-      "Contex-Api",
-      "yup",
-      "Github",
-    ],
-    linkName: "Linck da Página",
+      "E-commerce de hamburgueria desenvolvido a partir de um protótipo no Figma. A aplicação permite criar uma conta, navegar pelo cardápio e adicionar ou remover produtos do carrinho. A segunda versão reorganiza a implementação em TypeScript.",
+    stack: ["TypeScript", "React", "React Toastify", "React Router", "Styled Components", "Context API", "Yup"],
+    linkName: "Abrir demonstração",
     link: "https://entrega-hanburgueria-2-0-jh.vercel.app/",
     repositorio:
       "https://github.com/Kenzie-Academy-Brasil-Developers/entrega-hamburgueria-2.0-jh",
   },
-
   {
     id: 2,
     img: "/imagens/projetos/kenzieHub.jpg",
     name: "Kenzie Hub",
     descricao:
-      "Projeto desenvolvido com a finalidade de desenvolver minhas habilidades no uso da biblioteca React desenvolvendo um sistema de autenticação de cadastro e login para que o usuário possa ter acesso a sua área de usuário.",
-    stack: [
-      "React",
-      "Typescript",
-      "react-router-dom",
-      "Styled-Componet",
-      "Github",
-      "yup",
-    ],
-    linkName: "Linck da Página",
+      "Aplicação de autenticação com cadastro e login, construída com React e TypeScript. Depois de entrar, a pessoa usuária acessa uma área própria para gerenciar suas informações e tecnologias.",
+    stack: ["React", "TypeScript", "React Router", "Styled Components", "Yup"],
+    linkName: "Abrir demonstração",
     link: "https://entrega-s3-theta.vercel.app",
     repositorio:
       "https://github.com/Kenzie-Academy-Brasil-Developers/entrega-kenzie-hub-jh/tree/main/entrega-s3",
   },
-
   {
     id: 3,
     img: "/imagens/projetos/controle-de-gastos.jpg",
-    name: "Gestão de gastos",
+    name: "Nu Kenzie",
     descricao:
-      "Este foi um projeto onde eu tinha que desenvolver uma aplicação onde o usuário possa fazer a gestão dos seus gastos e assim ter um controle maior sobre sua renda",
-    stack: [
-      "React",
-      "Javascript",
-      "HTML",
-      "CSS",
-      "React-toastify",
-      "Styled-Componet",
-      "Github",
-    ],
-    linkName: "Linck Vercel",
+      "Aplicação de controle de gastos que permite registrar entradas e despesas para acompanhar o saldo. Um exercício de interface e gerenciamento de estado feito com React.",
+    stack: ["React", "JavaScript", "HTML", "CSS", "React Toastify", "Styled Components"],
+    linkName: "Abrir demonstração",
     link: "https://entrega-nu-kenzie-tau.vercel.app/",
     repositorio:
       "https://github.com/Kenzie-Academy-Brasil-Developers/gestao-de-gastos/tree/master/entrega-nu-kenzie",
   },
-
-  {
-    id: 4,
-    img: "/imagens/projetos/cosmos-search.jpg",
-    name: "Cosmos search",
-    descricao:
-      "Este foi um daqueles projetos desafiadores, onde tínhamos que trabalhar em squad pra realizar uma aplicação do 0, escolha de temas stack metodologias, no fim foi muito gratificante ver o projeto finalizado e ter este trabalho em equipe, neste caso queríamos aproximar mais o pessoal que gosta de astronomia criando uma rede social onde as pessoas possam compartilhar do mesmo assunto.",
-
-    stack: [
-      "Typescript",
-      "React",
-      "react-router-dom",
-      "Styled-Componet",
-      "React-toastify",
-      "Contex-Api",
-      "Github",
-      "yup",
-    ],
-    linkName: "Linck da Página",
-    link: "https://cosmos-search.vercel.app/",
-    repositorio:
-      "https://github.com/CosmosSearch-Grupo-4-Kenzie-Academy-M3/CosmosSearch/tree/main/CosmosSearch",
-  },
-
   {
     id: 5,
     img: "/imagens/projetos/gestaoDeEmpresas.png",
     name: "Gestão de Empresas",
     descricao:
-      "Aqui foi um super desafio, onde tinha que escrever uma aplicação para uma empresa onde ela tinha a possibilidade de fazer o controle de todas as empresas e seus setores além de ligar e desligar ou promover um determinado funcionário.",
-    stack: ["Javascript", "HTML", "CSS", "Github"],
-    linkName: "Repositório",
-    link: "https://github.com/JogadorHungria/Projeto-Final-do-M2",
-    repositorio: "https://github.com/JogadorHungria/m2-final",
+      "Painel para administrar empresas, setores e funcionários. O exercício explora operações de cadastro, atualização e organização de dados com JavaScript.",
+    stack: ["JavaScript", "HTML", "CSS"],
+    linkName: "Ver no GitHub",
+    link: "https://github.com/JogadorHungria/m2-final",
+    repositorio: "",
   },
-
-  {
-    id: 6,
-    img: "/imagens/projetos/HungriaBurguer-1.0.jpg",
-    name: "Hungria Burguer",
-    descricao:
-      "Este projeto, foi desenvolvido a partir de um figma onde eu tinha que desenvolver um site para uma empresa de fast-food, onde o cliente se cadastra e tem o poder de adicionar e remover do carrinho de compras",
-
-    stack: ["React", "Javascript", "HTML", "Styled-Componet", "Github"],
-    linkName: "Linck da Página",
-    link: "https://projeto-hamburgueria.vercel.app/",
-    repositorio:
-      "https://github.com/Kenzie-Academy-Brasil-Developers/template-hamburgueria/tree/main/projeto-hamburgueria",
-  },
-
   {
     id: 7,
     img: "/imagens/projetos/hungria-magazine.jpg",
     name: "Hungria Magazine",
     descricao:
-      "Este foi o meu primeiro projeto, utilizando apenas as tecnologias nativas javaScript CSS e HTML construir um e-comercie onde conseguiria adicionar ou remover itens de um determinado carrinho.",
-
-    stack: ["Javascript", "CSS", "HTML", "Github"],
-    linkName: "Link da Página",
+      "Primeiro projeto de e-commerce, feito com JavaScript, HTML e CSS sem frameworks. A interface permite explorar produtos e atualizar o carrinho de compras.",
+    stack: ["JavaScript", "CSS", "HTML"],
+    linkName: "Abrir demonstração",
     link: "https://kenzie-academy-brasil-developers.github.io/m1-capstone-ecommerce-templa_jogador_hungriate/",
     repositorio:
       "https://github.com/Kenzie-Academy-Brasil-Developers/m1-capstone-ecommerce-templa_jogador_hungriate",
-  },
-  {
-    id: 8,
-    img: "https://cdn.jornaldebrasilia.com.br/wp-content/uploads/2022/11/29115707/mercado-da-construcao-civil-em-crescimento-1024x672-1.png",
-    name: "Em construção",
-    descricao: "",
-    stack: [],
-    linkName: "",
-    link: "#",
-    repositorio: "",
   },
 ];

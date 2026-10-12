@@ -1,42 +1,25 @@
-import React, { useContext } from "react";
-import { CardStyles } from "./CardStyle";
 import { IProjetos } from "../../../../interface";
-import { GlobalContext } from "../../../../contexts";
-import { ButtonOne } from "../../../ButtonTypeOne";
+import { CardStyles } from "./CardStyle";
 
-export const Card = ({ projeto }: { projeto: IProjetos }) => {
-  const { opemModal, setOpemModal, setCardSelected } =
-    useContext(GlobalContext);
-
-  return (
-    <CardStyles>
-      <img src={projeto.img} alt="Imagem" />
-      <div>
-        <h2>{projeto.name}</h2>
-
-        <div className="container_buttons">
-          {projeto.link != "#" && (
-            <ButtonOne
-              type="button"
-              title={" Abrir descrição detalhada"}
-              onClick={() => {
-                setOpemModal(!opemModal), setCardSelected(projeto);
-              }}
-            />
-          )}
-
-          {projeto.repositorio != "" && (
-            <ButtonOne
-              type="a"
-              title={"Repositório"}
-              link={projeto.repositorio}
-            />
-          )}
-          {projeto.link != "#" && (
-            <ButtonOne type="a" title={"Link da página"} link={projeto.link} />
-          )}
-        </div>
+export const Card = ({ projeto }: { projeto: IProjetos }) => (
+  <CardStyles>
+    <img className="project-image" src={projeto.img} alt={`Prévia do projeto ${projeto.name}`} loading="lazy" />
+    <div className="project-body">
+      <h3>{projeto.name}</h3>
+      <p>{projeto.descricao}</p>
+      {!!projeto.stack?.length && (
+        <ul className="project-tags" aria-label={`Tecnologias usadas em ${projeto.name}`}>
+          {projeto.stack.slice(0, 5).map((technology) => <li key={technology}><span>{technology}</span></li>)}
+        </ul>
+      )}
+      <div className="project-links">
+        {projeto.link && projeto.link !== "#" && (
+          <a href={projeto.link} target="_blank" rel="noreferrer">{projeto.linkName || "Ver projeto"} <span aria-hidden="true">↗</span></a>
+        )}
+        {projeto.repositorio && (
+          <a href={projeto.repositorio} target="_blank" rel="noreferrer">Código-fonte <span aria-hidden="true">↗</span></a>
+        )}
       </div>
-    </CardStyles>
-  );
-};
+    </div>
+  </CardStyles>
+);

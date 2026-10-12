@@ -5,43 +5,37 @@ export const SobreMinStyle = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 80%;
-  max-width: 900px;
-  padding: clamp(40px, 10vh, 120px) 20px;
+  width: min(850px, calc(100% - 48px));
+  max-width: none;
+  padding: 50px 0 0;
   gap: clamp(20px, 3vw, 30px);
 
   div.effectScrollMonitoring {
     display: flex;
     flex-direction: column;
-    gap: clamp(20px, 3vw, 30px);
+    gap: 28px;
     width: 100%;
   }
 
   div.effectScrollMonitoring > div {
     display: flex;
     flex-direction: column;
-    padding: clamp(20px, 2vw, 30px);
-    gap: clamp(15px, 2vw, 20px);
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 8px;
-    border: 1px solid var(--color-1);
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  }
-
-  span {
-    color: blueviolet;
+    padding: 26px 30px;
+    gap: 16px;
+    background: rgba(18, 16, 24, 0.82);
+    border-radius: 12px;
+    border: 1px solid rgba(196,181,253,0.14);
   }
 
   p {
-    font-size: clamp(16px, 1.2vw, 20px);
-    text-align: justify;
-    line-height: 1.7;
-    color: var(--color-grey-4);
-    text-indent: 12px;
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.8;
+    color: #c6c1d0;
   }
 
   @media (max-width: 800px) {
-    padding-top: 60px;
+    padding-top: 38px;
 
     div.effectScrollMonitoring > div {
       padding: 20px;
@@ -50,11 +44,11 @@ export const SobreMinStyle = styled.section`
 
   @media (max-width: 400px) {
     div.effectScrollMonitoring > div {
-      padding: 15px;
+      padding: 16px;
     }
 
     p {
-      font-size: 14px;
+      font-size: 0.95rem;
     }
   }
 `;

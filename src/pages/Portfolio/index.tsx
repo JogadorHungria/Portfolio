@@ -1,26 +1,13 @@
-import React, { useState } from "react";
-import { Header } from "../../componets/Header";
 import { Main } from "../../componets/Main";
 import { Footer } from "../../componets/Footer";
-import { NavMobile } from "../../componets/Header/NavMobile/HeaderMobile";
 
 export function Portfolio() {
-  const [menuMobile, setMenuMobile] = useState(false);
-
-  const closeMenuMobile = () => {
-    setMenuMobile(false);
-  };
-
   return (
     <div
       style={{
         minHeight: "100vh",
         maxWidth: "100vw",
-        backgroundImage: 'url("/imagens/fundo-descktop.jpg")',
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundAttachment: "fixed",
-        backgroundRepeat: "no-repeat",
+        background: "radial-gradient(ellipse at 78% 4%, rgba(91, 48, 143, 0.2), transparent 35%), #0a090e",
       }}
     >
       <Main />

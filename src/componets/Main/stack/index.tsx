@@ -26,7 +26,7 @@ export const Tecnologias = ({ sizeIcon }: { sizeIcon: number }) => {
           <ul>
             <li>
               <SiJavascript fontSize={sizeIcon} />
-              <h3>Javascript</h3>
+              <h3>JavaScript</h3>
             </li>
 
             <li>
@@ -61,7 +61,7 @@ export const Tecnologias = ({ sizeIcon }: { sizeIcon: number }) => {
 
             <li>
               <SiExpress fontSize={sizeIcon} />
-              <h3>express</h3>
+              <h3>Express</h3>
             </li>
 
             <li>
@@ -81,7 +81,7 @@ export const Tecnologias = ({ sizeIcon }: { sizeIcon: number }) => {
 
             <li>
               <SiGithub fontSize={sizeIcon} />
-              <h3>Github</h3>
+              <h3>GitHub</h3>
             </li>
           </ul>
         </div>

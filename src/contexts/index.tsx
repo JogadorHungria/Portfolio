@@ -7,26 +7,25 @@ export const GlobalProvider = ({ children }: iChildren) => {
   const [opemModal, setOpemModal] = useState(false);
   const [cardSelected, setCardSelected] = useState<IProjetos>(null);
 
-  const options = {
-    rootMargin: "10px",
-    threshold: 1,
-  };
-
-  const observe = new IntersectionObserver((entries) => {
-    entries.map((element) => {
-      if (element.intersectionRatio > 0) {
-        element.target.classList.add("effectScroll");
-      } else if (element.intersectionRatio == 0) {
-        element.target.classList.remove("effectScroll");
-      }
-    });
-    options;
-  });
-
   useEffect(() => {
-    Array.from(document.querySelectorAll(".effectScrollMonitoring")).map(
-      (element) => observe.observe(element)
-    );
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      document.querySelectorAll(".effectScrollMonitoring").forEach((element) => {
+        element.classList.add("effectScroll");
+      });
+      return;
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(({ isIntersecting, target }) => {
+        if (isIntersecting) {
+          target.classList.add("effectScroll");
+          observer.unobserve(target);
+        }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+
+    document.querySelectorAll(".effectScrollMonitoring").forEach((element) => observer.observe(element));
+    return () => observer.disconnect();
   }, []);
 
   return (

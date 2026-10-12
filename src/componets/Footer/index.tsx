@@ -2,11 +2,9 @@ import { StyledFooter } from "./StyledFooter";
 
 export const Footer = () => {
   return (
-    <>
-      <StyledFooter>
-        <a href="#">Voltar ao topo</a>
-        <span>@Joilson Hungria</span>
-      </StyledFooter>
-    </>
+    <StyledFooter>
+      <a href="#start">Voltar ao início ↑</a>
+      <span>© {new Date().getFullYear()} Joilson Hungria</span>
+    </StyledFooter>
   );
 };

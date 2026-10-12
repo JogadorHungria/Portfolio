@@ -1,94 +1,58 @@
 import styled from "styled-components";
 
 export const HeaderStyle = styled.header`
-  box-shadow: 0px 0px 20px 0px blueviolet;
-  display: flex;
-  align-items: center;
-
-  width: 100%;
-  height: 100px;
-
-  background-image: linear-gradient(black, blueviolet);
-  color: white;
-
   position: fixed;
-  top: 0;
-  left: 0; /* garante alinhamento correto */
-  z-index: 11;
+  inset: 0 0 auto;
+  z-index: 20;
+  height: 76px;
+  border-bottom: 1px solid rgba(196,181,253,0.12);
+  background: rgba(10, 9, 14, 0.84);
+  backdrop-filter: blur(18px);
 
-  overflow-x: hidden; /* evita scroll lateral */
-
-  div {
-    position: relative; /* necessário pro svg absolute */
-
+  .header-inner {
     display: flex;
     align-items: center;
-    justify-content: center;
-
-    width: 100%;
+    justify-content: space-between;
+    width: min(1120px, calc(100% - 48px));
     height: 100%;
-    min-height: 50px;
-    padding: 10px;
-
-    max-width: var(--container--1);
     margin: 0 auto;
+  }
 
-    box-sizing: border-box; /* evita estouro de largura */
+  .brand {
+    color: white;
+    font-size: 1.35rem;
+    font-weight: 850;
+    letter-spacing: -0.06em;
+  }
+  .brand span { color: #a78bfa; }
 
-    h1 {
-      font-size: var(--font-title-2);
-      font-family: "Carter One", cursive, "Inter", sans-serif;
-    }
+  nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(14px, 2.4vw, 30px);
+  }
+  nav a {
+    color: #ccc7d5;
+    font-size: 0.88rem;
+    transition: color 160ms ease;
+  }
+  nav a:hover { color: white; }
 
-    svg {
-      opacity: 0.8;
-      display: none;
-    }
+  .menu-toggle {
+    display: none;
+    padding: 8px;
+    border: 1px solid rgba(196,181,253,0.22);
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    line-height: 0;
+  }
 
-    svg:hover {
-      opacity: 1;
-    }
-
-    nav {
-      display: flex;
-      gap: 20px;
-
-      a {
-        color: white;
-        font-size: 18px;
-        padding: 5px;
-        border-bottom: 1px solid transparent;
-        width: max-content;
-      }
-
-      a:hover {
-        border-bottom: 1px solid;
-        transform: scale(1.1);
-        transition: 0.3s;
-      }
-    }
-
-    @media (max-width: 850px) {
-      svg {
-        display: block;
-        cursor: pointer;
-        position: absolute; /* CORREÇÃO PRINCIPAL */
-        right: 20px;
-      }
-
-      nav {
-        display: none;
-      }
-
-      .displayFlex {
-        display: flex;
-      }
-    }
-
-    @media (max-width: 350px) {
-      > h1 {
-        font-size: 1.5rem;
-      }
-    }
+  @media (max-width: 850px) {
+    .menu-toggle { display: inline-flex; }
+    nav { display: none; }
+  }
+  @media (max-width: 480px) {
+    .header-inner { width: calc(100% - 36px); }
   }
 `;

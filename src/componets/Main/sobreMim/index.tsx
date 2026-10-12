@@ -3,25 +3,28 @@ import { Title } from "../../Titles";
 export const SobreMin = () => {
   return (
     <SobreMinStyle id="aboutMe">
-      <div style={{ marginTop: "100px" }} className="effectScrollMonitoring">
+      <div className="effectScrollMonitoring">
         <Title text={"Sobre mim"} />
         <div>
           <p>
-            {<span> # </span>}
-            "Sou um desenvolvedor web apaixonado por transformar ideias em
-            realidade através de soluções digitais inovadoras. Com habilidades
-            sólidas em front-end e back-end, meu objetivo é criar experiências
-            interativas e funcionais que impactem positivamente os usuários.
-            Estou sempre atualizado com as últimas tecnologias e tendências do
-            setor, buscando constantemente aprimorar minhas habilidades para
-            oferecer resultados de alta qualidade. Sou um colaborador
-            entusiasmado, pronto para enfrentar desafios e contribuir para
-            projetos web de sucesso."
+            Sou Joilson Hungria, desenvolvedor web com experiência prática na
+            construção de interfaces e aplicações usando React, JavaScript e
+            TypeScript. Gosto de transformar requisitos em produtos claros,
+            responsivos e fáceis de usar.
+          </p>
+          <p>
+            Meus projetos incluem experiências de compra, controle de gastos,
+            autenticação e uma rede social sobre astronomia criada em equipe.
+            Também venho ampliando minha base em Node.js, Express, Python,
+            Django e PostgreSQL.
+          </p>
+          <p>
+            Valorizo código organizado, colaboração e aprendizado contínuo. No
+            portfólio, compartilho tanto o resultado quanto as tecnologias por
+            trás de cada projeto.
           </p>
         </div>
       </div>
-
-      <p></p>
     </SobreMinStyle>
   );
 };

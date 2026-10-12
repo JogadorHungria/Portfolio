@@ -10,11 +10,12 @@ export const NavMobile = ({ openCloseMenu }) => {
 
   return (
     <MenuMobileStyle
+      id="mobile-menu"
       onClick={(e) => {
         closeClickDiv(e);
       }}
     >
-      <nav id="menu" className="menu animation2">
+      <nav aria-label="Navegação móvel" className="menu animation2">
         <a onClick={() => openCloseMenu()} className="menu" href="#start">
           Início
         </a>

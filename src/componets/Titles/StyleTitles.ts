@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const StyleTitle = styled.h2`
   font-size: var(--font-title-1);
-  font-weight: 600;
+  font-weight: 750;
   text-align: center;
-  text-shadow: 0px 0px 20px blue;
-  font-family: "Carter One", cursive, "Inter", sans-serif;
+  color: #f7f5fa;
+  letter-spacing: -0.045em;
+  font-family: "Inter", system-ui, sans-serif;
 `;
