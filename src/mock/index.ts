@@ -6,7 +6,7 @@ export const projetos: IProjetos[] = [
     img: "/imagens/projetos/fideze-pre-cadastro.png",
     name: "Fídizé",
     descricao:
-      "Aplicativo de mobilidade urbana pensado para conectar passageiros e motoristas em Simões Filho. O projeto reúne apps mobile para os dois públicos e uma API com cadastro, autenticação, corridas e atualizações em tempo real. Está em desenvolvimento; o fluxo do MVP ainda depende da configuração dos serviços e de testes nos aparelhos.",
+      "Plataforma de mobilidade urbana para Simões Filho, com apps Expo para passageiros e motoristas e backend NestJS com PostgreSQL e Prisma. O fluxo cobre cadastro, login, solicitação, aceite e etapas da corrida, com localização e eventos em tempo real. Os três projetos passam na checagem de TypeScript. O MVP ainda precisa de validação ponta a ponta em dois celulares, reforços de segurança e preparação para produção.",
     stack: ["React Native", "Expo", "NestJS", "Prisma", "PostgreSQL", "Socket.IO", "Zustand"],
     linkName: "Ver pré-cadastro",
     link: "/fidize",
